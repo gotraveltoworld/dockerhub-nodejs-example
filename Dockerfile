@@ -4,6 +4,7 @@ FROM node:boron
 LABEL maintainer="gotraveltoworld <gotraveltoworld@gmail.com>"
 # Create a directory in the container where the code will be placed.
 RUN mkdir -p /nodejs-container
+COPY src/. /nodejs_container
 # Set this as the default working directory.
 WORKDIR /nodejs-container
 # Install express with npm
